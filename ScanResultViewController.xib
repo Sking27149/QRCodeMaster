@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ScanResultViewController">
+            <connections>
+                <outlet property="resultLabel" destination="OMS-De-AFv" id="z29-ea-iY0"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="asdakdishjlsf;skfh;dsf;kdg;dfgh;kdfghd;figd;fgihd;lfkgd;flk;dlfgjd;flgjdflgjdf;ldsakfrjhdfks.hkdjf" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OMS-De-AFv">
+                    <rect key="frame" x="10" y="60" width="355" height="547"/>
+                    <color key="backgroundColor" red="0.9290195107460022" green="0.99554163217544556" blue="0.011541320942342281" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5AZ-Az-9pp">
+                    <rect key="frame" x="28" y="622" width="40" height="35"/>
+                    <color key="backgroundColor" red="0.32528036832809448" green="0.99594384431838989" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="TUH-Ck-f5D"/>
+                        <constraint firstAttribute="width" constant="40" id="yy3-s9-X9q"/>
+                    </constraints>
+                    <state key="normal" title="go"/>
+                    <connections>
+                        <action selector="goBtn:" destination="-1" eventType="touchUpInside" id="HHc-eO-JJM"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.3221094012260437" green="0.99637836217880249" blue="0.97226923704147339" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="OMS-De-AFv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="60" id="1vn-Pt-0cw"/>
+                <constraint firstItem="OMS-De-AFv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="67n-a4-gQO"/>
+                <constraint firstAttribute="bottom" secondItem="5AZ-Az-9pp" secondAttribute="bottom" constant="10" id="9TH-kX-kZm"/>
+                <constraint firstItem="5AZ-Az-9pp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="28" id="fxf-g0-qWm"/>
+                <constraint firstAttribute="trailing" secondItem="OMS-De-AFv" secondAttribute="trailing" constant="10" id="oco-Xd-RPz"/>
+                <constraint firstAttribute="bottom" secondItem="OMS-De-AFv" secondAttribute="bottom" constant="60" id="x4N-eb-rDa"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <point key="canvasLocation" x="121.5" y="427.5"/>
+        </view>
+    </objects>
+</document>
