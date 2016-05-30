@@ -14,9 +14,38 @@
 
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
 
+@property (strong, nonatomic) UIAlertController *alertVC;
+
 @end
 
 @implementation GeneratorViewController
+
+//保存二维码图片到本地
+- (IBAction)tap:(id)sender {
+    //高斯模糊
+    UIBlurEffect *blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
+    UIVisualEffectView *effectView = [[UIVisualEffectView alloc] initWithEffect:blur];
+    effectView.frame = self.view.frame;
+    [self.view addSubview:effectView];
+    
+    //提醒视图
+    self.alertVC = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:(UIAlertControllerStyleActionSheet)];
+    UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"保存到相册" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
+        UIImageWriteToSavedPhotosAlbum(self.imageView.image, self, nil, nil);
+        [effectView removeFromSuperview];
+
+    }];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
+        [effectView removeFromSuperview];
+    }];
+    [self.alertVC addAction:confirmAction];
+    [self.alertVC addAction:cancelAction];
+    [self presentViewController:self.alertVC animated:YES completion:nil];
+}
+
+//- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+//    [self.alertVC dismissViewControllerAnimated:YES completion:nil];
+//}
 
 - (IBAction)dismissBtn:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];

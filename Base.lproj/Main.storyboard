@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="w77-KY-Gxu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="w77-KY-Gxu">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--扫描二维码-->
@@ -96,13 +96,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wur-ib-upd">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wur-ib-upd">
                                 <rect key="frame" x="87" y="234" width="200" height="200"/>
                                 <color key="backgroundColor" red="0.31961420178413391" green="0.98034769296646118" blue="0.068061031401157379" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="DBl-hn-1ah"/>
                                     <constraint firstAttribute="width" constant="200" id="rhE-Ge-u6b"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="k5d-L3-f1B" appends="YES" id="TlG-4j-A6Q"/>
+                                </connections>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qVs-T2-AiA">
                                 <rect key="frame" x="47" y="49" width="56" height="38"/>
@@ -116,6 +120,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.30676564574241638" green="0.94550377130508423" blue="0.29151478409767151" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="wur-ib-upd" firstAttribute="centerX" secondItem="PRV-RE-EVe" secondAttribute="centerX" id="ULA-XH-Qqo"/>
                             <constraint firstItem="wur-ib-upd" firstAttribute="centerY" secondItem="PRV-RE-EVe" secondAttribute="centerY" id="dHc-Cx-my2"/>
@@ -127,8 +132,13 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C2y-Qb-E94" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="k5d-L3-f1B">
+                    <connections>
+                        <action selector="tap:" destination="dVJ-xS-f3W" id="xJk-Aa-UBa"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1975.5" y="755.5"/>
+            <point key="canvasLocation" x="1867.5" y="755.5"/>
         </scene>
         <!--生成二维码-->
         <scene sceneID="uRY-lb-Gye">
